@@ -23,7 +23,7 @@ app.use(express.json()); // to parse json body
 app.use(cookieParser());
 app.use(
     cors({
-        origin: 'http://localhost:5173', // frontend link
+        origin: 'https://ed-tech-platform-frontend.onrender.com', // frontend link
         // origin: process.env.FRONTEND_URL,
         // origin: "*",
         credentials: true
