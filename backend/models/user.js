@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema(
         firstName: {
             type: String,
             required: true,
-            trim: true
+            trim: true    // Ensure first name is a string and required
         },
         lastName: {
             type: String,
@@ -26,11 +26,11 @@ const userSchema = new mongoose.Schema(
             enum: ['Admin', 'Instructor', 'Student'],
             reuired: true
         },
-        active: {
+        active: {                   
             type: Boolean,
             default: true,
         },
-        approved: {
+        approved: {        // Indicates if the user is approved by an admin
             type: Boolean,
             default: true,
         },
@@ -49,7 +49,7 @@ const userSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        token: {
+        token: {                 // why we need token in user schema? -- to handle password reset or email verification
             type: String
         },
         resetPasswordTokenExpires: {

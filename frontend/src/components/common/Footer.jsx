@@ -176,19 +176,19 @@ const Footer = () => {
             <div className="flex ">
               <span> Made with ❤️</span>
 
-              <Link to='https://github.com/Aniruddha-Gade' target="__blank" className="text-white hover:underline mr-1"
+              <Link to='https://github.com/lovendra0102' target="__blank" className="text-white hover:underline mr-1"
               >
-                Adarsh
+                Rajat
               </Link>
             </div>
             <span> © 2025 Studynotion</span>
           </div>
 
           <div className="flex items-center">
-            <a href="https://www.linkedin.com/in/adarsh-kumar0412/" className="text-white p-3 hover:bg-richblack-700 rounded-full duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/rajat-saroj-5829b6315/" className="text-white p-3 hover:bg-richblack-700 rounded-full duration-300" target="_blank" rel="noopener noreferrer">
               <ImLinkedin2 size={17} />
             </a>
-            <a href="https://github.com/Adarsh-kumar12-sys" className="text-white p-3 hover:bg-richblack-700 rounded-full duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Rajat-Saroj" className="text-white p-3 hover:bg-richblack-700 rounded-full duration-300" target="_blank" rel="noopener noreferrer">
               <ImGithub size={17} />
             </a>
           </div>

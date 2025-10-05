@@ -18,6 +18,7 @@ const {
 
 // Middleware
 const { auth, isAdmin } = require('../middleware/auth');
+
 const { getAllStudents, getAllInstructors } = require('../controllers/profile');
 
 

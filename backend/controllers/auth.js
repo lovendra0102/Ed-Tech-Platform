@@ -23,7 +23,7 @@ exports.sendOTP = async (req, res) => {
 
         // if exist then response
         if (checkUserPresent) {
-            console.log('(when otp generate) User alreay registered')
+            // console.log('(when otp generate) User alreay registered')
             return res.status(401).json({
                 success: false,
                 message: 'User is Already Registered'
@@ -198,6 +198,7 @@ exports.login = async (req, res) => {
                 accountType: user.accountType // This will help to check whether user have access to route, while authorzation
             };
 
+            
             // Generate token 
             const token = jwt.sign(payload, process.env.JWT_SECRET, {
                 expiresIn: "24h",

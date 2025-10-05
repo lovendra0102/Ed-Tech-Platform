@@ -17,14 +17,15 @@ const profileRoutes = require('./routes/profile');
 const paymentRoutes = require('./routes/payments');
 const courseRoutes = require('./routes/course');
 
+FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 // middleware 
 app.use(express.json()); // to parse json body
 app.use(cookieParser());
 app.use(
     cors({
-        origin: 'http://localhost:5173', // frontend link
-        // origin: process.env.FRONTEND_URL,
+        // origin: 'http://localhost:5173', // frontend link
+        origin: process.env.FRONTEND_URL,
         // origin: "*",
         credentials: true
     })
@@ -48,7 +49,7 @@ connectDB();
 cloudinaryConnect();
 
 // mount route
-app.use('/api/v1/auth', userRoutes);
+app.use('/api/v1/auth', userRoutes);           
 app.use('/api/v1/profile', profileRoutes);
 app.use('/api/v1/payment', paymentRoutes);
 app.use('/api/v1/course', courseRoutes);
